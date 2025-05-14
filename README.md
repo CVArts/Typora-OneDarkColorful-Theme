@@ -10,9 +10,9 @@
    4. **插件**: [Typora Plugin](https://github.com/obgnail/typora_plugin)
 
 2. 本主题测试环境
-   1. 系统版本:Windows11 *v23H2*;
-   2. 软件版本:Typora *v1.108*;
-   3. 硬件:<u>2K屏幕,150%缩放</u>.
+   1. ==系统版本==:Windows11 *v23H2*;
+   2. ==软件版本==:Typora *v1.108*;
+   3. ==硬件==:<u>2K屏幕,150%缩放</u>.
 
 ## 主要特性
 
@@ -34,15 +34,15 @@
 
 ### 静态样式
 
-![image-20250514145009241](./README.assets/image-20250514145009241.png)
+<img src="./README.assets/image-20250514145009241.png" alt="image-20250514145009241" style="zoom:67%;" />
 
-![image-20250514145501809](./README.assets/image-20250514145501809.png)
+<img src="./README.assets/image-20250514145501809.png" alt="image-20250514145501809" style="zoom:67%;" />
 
-![image-20250514145647605](./README.assets/image-20250514145647605.png)
+<img src="./README.assets/image-20250514145647605.png" alt="image-20250514145647605" style="zoom:67%;" />
 
 ### 动效
 
-![](./README.assets/动效.gif)
+<img src="./README.assets/动效.gif" style="zoom:67%;" />
 
 ## 安装
 
