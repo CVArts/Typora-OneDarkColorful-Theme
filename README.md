@@ -46,12 +46,11 @@
 
 ## 安装
 
-1. 下载;
-2. 解压下载的压缩文件;
-3. 可打开 `📁./example` 文件夹下的 `📄example.pdf` 预览主题, 也可在完成安装后打开 `📁./example` 文件夹下的 `📄example.md` 预览主题;
-4. 双击安装 `📁./fonts` 文件夹下的字体文件;
+1. 下载压缩包(也可直接下载`📁./theme` 文件夹下的 `📄one_dark_colorful.css` 文件,然后自行下载`📁.theme/fonts` 文件夹下的字体).
+3. 解压下载的压缩文件;
+4. 双击安装 `📁.theme/fonts` 文件夹下的字体文件;
 5. 将 `📁./theme` 文件夹下的 `📄one_dark_colorful.css` 文件复制到 Typora 主题文件夹下;
-6. 重启 Typora, 选择 ==OneDarkColorful== 主题;
+6. 重启 Typora, 选择 OneDarkColorful主题;
 
 ## To-Do
 
