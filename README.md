@@ -10,9 +10,9 @@
    4. **插件**: [Typora Plugin](https://github.com/obgnail/typora_plugin)
 
 2. 本主题测试环境
-   1. ==系统版本==:Windows11 *v23H2*;
-   2. ==软件版本==:Typora *v1.108*;
-   3. ==硬件==:<u>2K屏幕,150%缩放</u>.
+   1. 系统版本:Windows11 *v23H2*;
+   2. 软件版本:Typora *v1.108*;
+   3. 硬件:<u>2K屏幕,150%缩放</u>.
 
 ## 主要特性
 
