@@ -34,15 +34,15 @@
 
 ### 静态样式
 
-<img src="./README.assets/image-20250514145009241.png" alt="image-20250514145009241" style="zoom:50%;" />
+<img src="./README.assets/image-20250514145009241.png" alt="image-20250514145009241" style="zoom:40%;" />
 
-<img src="./README.assets/image-20250514145501809.png" alt="image-20250514145501809" style="zoom:50%;" />
+<img src="./README.assets/image-20250514145501809.png" alt="image-20250514145501809" style="zoom:40%;" />
 
-<img src="./README.assets/image-20250514145647605.png" alt="image-20250514145647605" style="zoom:50%;" />
+<img src="./README.assets/image-20250514145647605.png" alt="image-20250514145647605" style="zoom:40%;" />
 
 ### 动效
 
-<img src="./README.assets/动效.gif" style="zoom:50%;" />
+<img src="./README.assets/动效.gif" style="zoom:40%;" />
 
 ## 安装
 
