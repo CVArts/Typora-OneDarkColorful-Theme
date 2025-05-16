@@ -5,7 +5,7 @@
 
    2. **字体**: [霞鹜文楷](https://github.com/lxgw/LxgwWenKai)
 
-   3. **字体**: [consolaslxgw](https://github.com/lxgw/LxgwWenKai)
+   3. **字体**: [consolaslxgw](https://github.com/MichaelC001/Consolas-Nerd-LXGW-Wenkai-Mono)
 
    4. **插件**: [Typora Plugin](https://github.com/obgnail/typora_plugin)
 
