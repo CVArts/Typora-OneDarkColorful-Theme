@@ -155,6 +155,7 @@ kbd {
   /* 背景色与主题面板一致 */
   font-size: 0.9em;
   /* 略小字体更符合kbd风格 */
+  font-weight: bold;
 }
 
 /*********************************
@@ -207,11 +208,9 @@ kbd {
   content: "";
   position: absolute;
   left: 0;
-  top: 55%;
   width: 100%;
   height: 1px;
-  background-color: rgb(177, 180, 185, 0.8);
-  ;
+  background-color: var(--code-red-color);
   transform: translateY(-50%);
 }
 
@@ -299,6 +298,8 @@ p {
   width: fit-content;
   /* 背景仅包裹文字内容 */
   line-height: 1.1em;
+  font-size: 0.95em;
+  font-weight: bold;
   letter-spacing: 0.07em;
   /* 增加标题字符间距 */
   color: rgba(0, 0, 0, 0.8);
@@ -314,8 +315,8 @@ p {
 }
 
 #write h1 {
-  font-size: 2em;
-  font-weight: bolder;
+  font-size: 1.3em;
+  font-weight: bold;
   /* border-bottom: 3px double var(--text-color5); */
   background-color: var(--code-red-color);
   position: relative;
@@ -335,7 +336,7 @@ p {
   /* 覆盖整行宽度（视口宽度） */
   max-width: 1000px;
   /* 限制最大宽度与#write一致 */
-  height: 2px;
+  height: 1px;
   /* 分割线粗细 */
   background-color: var(--text-color5);
   /* 使用现有变量保持风格 */
@@ -345,32 +346,30 @@ p {
 }
 
 #write h2 {
-  font-size: 1.7em;
-  font-weight: bolder;
-  background-color: var(--code-yellow-color);
-}
-
-#write h3 {
-  font-size: 1.4em;
-  font-weight: bolder;
-  background-color: var(--code-purple-color);
-}
-
-#write h4 {
-  font-size: 1em;
+  font-weight: normal;
+  font-weight: bold;
   background-color: var(--code-green-color);
 }
 
+#write h3 {
+  font-weight: normal;
+  font-weight: bold;
+  background-color: var(--code-blue-color);
+}
+
+#write h4 {
+  font-weight: normal;
+  background-color: var(--code-purple-color);
+}
+
 #write h5 {
-  font-size: 1em;
   font-weight: normal;
   background-color: var(--code-cyan-color);
 }
 
 #write h6 {
-  font-size: 1em;
   font-weight: normal;
-  background-color: rgba(97, 175, 239, 0.8);
+  background-color: var(--code-orange-color);
 }
 
 /* 标题处于焦点状态的样式 */
@@ -645,29 +644,49 @@ hr {
 }
 
 
-/* 有序列表样式 */
-ul,
+/* 列表样式 */
 ol {
   padding-left: 20px;
 }
 
+/* 一级列表标记样式 */
 ol {
-  list-style-type: upper-alpha;
+  list-style-type: decimal;
 }
 
-ol ol {
-  list-style-type: lower-alpha;
+/* 添加括号 */
+ol li::marker {
+  content: "(" counter(list-item) ")\2009";
 }
 
-#write ol>li,
-#write ul>li {
+/* 二级列表标记样式 */
+ol ol>li::marker {
+  content: counter(list-item, decimal) ")\2009";
+}
+
+#write ol>li {
   color: rgba(209, 154, 102);
 }
 
-#write ol>li>*,
+#write ol>li>* {
+  color: rgb(171, 178, 191);
+}
+
+/* 无序列表基础样式 */
+ul {
+  padding-left: 9px;
+}
+
+#write ul>li {
+  color: var(--code-cyan-color);
+}
+
 #write ul>li>* {
   color: rgb(171, 178, 191);
 }
+
+
+
 
 
 /* 引用样式 */
@@ -859,7 +878,7 @@ table tr td:last-child {
 
 /* 任务列表样式 */
 .md-task-list-item>input {
-  margin-left: -1.3em;
+  margin-left: -1.5em;
   margin-top: 0.32em;
   box-shadow: none;
 }
@@ -1461,6 +1480,7 @@ input[type="radio"]:checked:before {
   /* 竖线颜色 */
   border-radius: 2px;
   /* 端点圆角 */
+  transition: 0.3s ease;
 }
 
 /* 树列表文件鼠标悬停背景 */
