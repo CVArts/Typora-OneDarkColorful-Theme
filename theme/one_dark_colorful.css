@@ -97,6 +97,10 @@
   --node-fill: var(--bg-color2);
   /* implicit border color in export menu of setting */
   --border-color: var(--menu-divider-color);
+
+  --macbtn-red-active: #ff6666;
+  --macbtn-yellow-active: #ffff66;
+  --macbtn-green-active: #66ff66;
 }
 
 /* 基本样式 */
@@ -300,8 +304,6 @@ p {
   line-height: 1.1em;
   font-size: 0.95em;
   font-weight: bold;
-  letter-spacing: 0.07em;
-  /* 增加标题字符间距 */
   color: rgba(0, 0, 0, 0.8);
   font-family: 'Microsoft YaHei UI';
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -355,21 +357,35 @@ p {
   font-weight: normal;
   font-weight: bold;
   background-color: var(--code-blue-color);
+  margin-left: 20px;
 }
 
 #write h4 {
+  line-height: 0.8em;
   font-weight: normal;
   background-color: var(--code-purple-color);
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 20px;
+
 }
 
 #write h5 {
   font-weight: normal;
   background-color: var(--code-cyan-color);
+  line-height: 0.8em;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 20px;
 }
 
 #write h6 {
   font-weight: normal;
   background-color: var(--code-orange-color);
+  line-height: 0.8em;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 20px;
 }
 
 /* 标题处于焦点状态的样式 */
@@ -973,7 +989,6 @@ sup.md-footnote {
   transition: 0.5s;
   visibility: visible;
   opacity: 1;
-  animation: none;
 }
 
 
@@ -1034,7 +1049,7 @@ input[type="radio"]:before {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* 视频 hover */
+/* 视频悬停 */
 input[type="radio"]:not([disabled]):not(:checked):hover:before {
   content: "\25CF";
   font-size: 1rem;
@@ -1083,7 +1098,6 @@ input[type="radio"]:checked:before {
   /* 圆角边框 */
   margin: 20px 0px;
   /* 外边距 */
-  ;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
   /* 添加阴影 */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -1855,7 +1869,7 @@ footer.ty-footer {
 
 /* 滚动条 */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
   padding-right: 10px;
   background-color: rgba(0, 0, 0, 0);
 }
@@ -1915,8 +1929,8 @@ footer.ty-footer {
 }
 
 .MathJax_Display {
-  font-size: 1.2em;
-  /* 调整公式字体大小 */
+  font-size: 1.1em;
+  font-family: "Microsoft YaHei";
 }
 
 /* mathjax edit panel*/
@@ -1934,6 +1948,8 @@ footer.ty-footer {
   outline: none;
   background-color: transparent;
 }
+
+
 
 /* notification panel */
 #md-notification {
@@ -1968,7 +1984,7 @@ code {
 .md-fences:active {
   background-color: rgba(33, 37, 43);
   border-radius: 6px;
-  padding: 20px 4px 20px 4px !important;
+  padding: 24px 4px 24px 4px !important;
   margin-top: 15px;
   margin-bottom: 15px;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
@@ -1977,7 +1993,32 @@ code {
   line-height: 1.6em;
   white-space: nowrap;
   min-width: 550px;
+  /* 新增相对定位用于按钮定位 */
+  position: relative;
 }
+
+/* 新增mac风格窗口控制按钮 */
+.md-fences::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 50px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--code-red-color);
+  /* 关闭按钮 - 红色 */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 22px 0 var(--code-yellow-color), 44px 0 var(--code-green-color);
+  /* 最小化(黄色)、最大化(绿色)按钮 */
+}
+
+/* 点击效果 */
+.md-fences:active::before {
+  background: var(--macbtn-red-active);
+  box-shadow: 22px 0 var(--macbtn-yellow-active), 44px 0 var(--macbtn-green-active);
+}
+
 
 /* 代码块语言选择样式 */
 .auto-suggest-container {
